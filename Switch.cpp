@@ -25,12 +25,10 @@ void loop() {
   swRead = analogRead(SW);
   // Determine if X is past deviation
   if(XBASE * (1.0 - DEVIATION >= xRead || XBASE * (1.0 + DEVIATION) <= xRead)){
-    Serial.println(XBASE * (1.0 - DEVIATION));
     Serial.println("X PAST DEVIATION: READING: " + static_cast<String>(xRead));
   }
   // Determine if Y is past deviation
   if(YBASE * (1.0 - DEVIATION >= yRead || YBASE * (1.0 + DEVIATION) <= yRead)){
-    Serial.println(YBASE * (1.0 - DEVIATION));
     Serial.println("Y PAST DEVIATION: READING: " + static_cast<String>(yRead));
   }
   Serial.println("TICK END");
